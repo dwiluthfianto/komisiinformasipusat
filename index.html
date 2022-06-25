@@ -406,16 +406,24 @@
         </div>
       </div>
 
-      <div class="container">
-        <p class="text-center" style="font-size: 2rem; font-weight: bold">
-          Statistik Permohonan Informasi
+      <div class="container d-flex flex-column justify-content-center text-center">
+        
+        <p style="font-size: 2rem; font-weight: bold" id="judulInformasi"> Statistik Permintaan
         </p>
-        <button id="kembali" class="btn rounded-circle" style="background-color: #ba131a; display: none;"><span class="material-icons">
-          arrow_back
-          </span></button>
-        <div class="">
+        <div class="w-75" style="margin:auto">
+          <div class="w-25">
+            <select class="form-select form-select mb-3" id="jenisData" aria-label=".form-select-lg example" onchange="updateJenisLaporan(this)">
+              <option value="permintaan" selected>Permintaan</option>
+              <option value="disetujui">Disetujui</option>
+              <option value="ditolak">Ditolak</option>
+              <option value="keberatan">keberatan</option>
+            </select>
+          </div>
           <canvas id="myChart"></canvas>
           <canvas id="myChart2" style="display: none;"></canvas>
+          <button id="kembali" class="btn rounded-circle" style="background-color: #ba131a; display: none;"><span class="material-icons">
+            arrow_back
+            </span></button>
         </div>
       </div>
 
@@ -874,170 +882,7 @@
       referrerpolicy="no-referrer"
     ></script>
     <script type="text/javascript" src="js/propeller.min.js"></script>
-
-    <script>
-      
-
-      const data = {
-        // labels: labels,
-        datasets: [
-          {
-            label: "Laporan",
-            data: [
-              {x: '2011', y:71, monthly:[0, 3 ,2,5,5,3,6,3,9,9,14, 12,]},
-              {x: '2012', y:200, monthly:[11, 16 ,11,11,13,37,15,12,19,16,12, 27,]},
-              {x: '2013', y:52, monthly:[11, 16 ,11,11,13,37,15,12,19,16,12, 27,]},
-              {x: '2014', y:210, monthly:[11, 16 ,11,11,13,37,15,12,19,16,12, 27,]},
-              {x: '2015', y:282, monthly:[11, 16 ,11,11,13,37,15,12,19,16,12, 27,]},
-              {x: '2016', y:2746, monthly:[11, 16 ,11,11,13,37,15,12,19,16,12, 27,]},
-              {x: '2017', y:1065, monthly:[11, 16 ,11,11,13,37,15,12,19,16,12, 27,]},
-              {x: '2018', y:474, monthly:[11, 16 ,11,11,13,37,15,12,19,16,12, 27,]},
-              {x: '2019', y:2136, monthly:[11, 16 ,11,11,13,37,15,19,16,12,27, 12,]},
-              {x: '2020', y:2121, monthly:[11, 11 ,16,14,10,15,37,12,19,16,12, 27,]},
-              {x: '2021', y:4306, monthly:[11, 16 ,11,11,13,37,15,12,19,16,12, 27,]},
-              {x: '2022', y:419, monthly:[11, 16 ,11,11,13,37,15,12,19,16,12, 27,]},
-            ],
-            backgroundColor: [
-              "rgba(255, 99, 132, 0.2)",
-              "rgba(255, 159, 64, 0.2)",
-              "rgba(255, 205, 86, 0.2)",
-              "rgba(75, 192, 192, 0.2)",
-              "rgba(54, 162, 235, 0.2)",
-              "rgba(153, 102, 255, 0.2)",
-              "rgba(201, 203, 207, 0.2)",
-              "rgba(255, 99, 132, 0.2)",
-              "rgba(255, 159, 64, 0.2)",
-              "rgba(255, 205, 86, 0.2)",
-              "rgba(75, 192, 192, 0.2)",
-              "rgba(255, 159, 64, 0.2)",
-            ],
-            borderColor: [
-              "rgb(255, 99, 132)",
-              "rgb(255, 159, 64)",
-              "rgb(255, 205, 86)",
-              "rgb(75, 192, 192)",
-              "rgb(54, 162, 235)",
-              "rgb(153, 102, 255)",
-              "rgb(201, 203, 207)",
-              "rgb(255, 99, 132)",
-              "rgb(255, 159, 64)",
-              "rgb(255, 205, 86)",
-              "rgb(75, 192, 192)",
-              "rgb(54, 162, 235)",
-            ],
-            borderWidth: 1,
-          },
-        ],
-      };
-      const config = {
-        type: "bar",
-        data: data,
-        options: {
-          scales: {
-            y: {
-              beginAtZero: true,
-            },
-          },
-        },
-      };
-      const ctx = document.getElementById("myChart");
-      const myChart = new Chart(ctx, config);
-
-      // chart2
-      const labels2 = [
-        "Jan",
-        "Feb",
-        "Mar",
-        "Apr",
-        "Mei",
-        "Jun",
-        "Jul",
-        "Agu",
-        "Sep",
-        "Okt",
-        "Nov",
-        "Des",
-      ];
-
-      const data2 = {
-        labels: labels2,
-        datasets: [
-          {
-            label: "Laporan",
-            data: [
-              71, 200, 52, 210, 282, 2746, 1065, 474, 2136, 2121, 4306, 418,
-            ],
-            backgroundColor: [
-              "rgba(255, 99, 132, 0.2)",
-              "rgba(255, 159, 64, 0.2)",
-              "rgba(255, 205, 86, 0.2)",
-              "rgba(75, 192, 192, 0.2)",
-              "rgba(54, 162, 235, 0.2)",
-              "rgba(153, 102, 255, 0.2)",
-              "rgba(201, 203, 207, 0.2)",
-              "rgba(255, 99, 132, 0.2)",
-              "rgba(255, 159, 64, 0.2)",
-              "rgba(255, 205, 86, 0.2)",
-              "rgba(75, 192, 192, 0.2)",
-              "rgba(255, 159, 64, 0.2)",
-            ],
-            borderColor: [
-              "rgb(255, 99, 132)",
-              "rgb(255, 159, 64)",
-              "rgb(255, 205, 86)",
-              "rgb(75, 192, 192)",
-              "rgb(54, 162, 235)",
-              "rgb(153, 102, 255)",
-              "rgb(201, 203, 207)",
-              "rgb(255, 99, 132)",
-              "rgb(255, 159, 64)",
-              "rgb(255, 205, 86)",
-              "rgb(75, 192, 192)",
-              "rgb(54, 162, 235)",
-            ],
-            borderWidth: 1,
-          },
-        ],
-      };
-      const config2 = {
-        type: "bar",
-        data: data2,
-        options: {
-          scales: {
-            y: {
-              beginAtZero: true,
-            },
-          },
-        },
-      };
-
-      const kembali = document.getElementById("kembali");
-      const ctx2 = document.getElementById("myChart2");
-      const myChart2 = new Chart(ctx2, config2);
-
-
-      function clickHandler(click) {
-        const points = myChart.getElementsAtEventForMode(click, 'nearest', {intersect: true}, true);
-
-        if(points.length == 1){
-          const label = points[0].element.$context.raw.x;
-          const value = points[0].element.$context.raw.monthly;
-          myChart2.config.data.datasets[0].data = value;
-          myChart2.config.data.datasets[0].label = label;
-          ctx.style.display = "none";
-          ctx2.style.display = "block";
-          kembali.style.display = "block";
-          myChart2.update();
-        }
-      }
-
-      kembali.onclick = function kembaliFunc(click) {
-        ctx.style.display = "block";
-        ctx2.style.display = "none";
-        kembali.style.display = "none";
-      }
-
-      ctx.onclick = clickHandler;
-    </script>
+    <script src="js/diagram.js"></script>
+   
   </body>
 </html>
