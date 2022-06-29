@@ -26,21 +26,17 @@
       href="css/slick.css"
       
     />
+    <link rel="stylesheet" href="css/style.css"/>
     <link
       rel="stylesheet"
       href="css/simple-line-icons.css"
-      
-    />
-    <link
-      rel="stylesheet"
-      href="css/style.css"
       
     />
     <!-- Propeller css -->
     <link href="css/propeller.min.css" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
 
   </head>
 
@@ -301,45 +297,33 @@
           </div>
         </nav>
       </header>
-
+      
       <!-- hero section -->
-      <!-- hero section -->
-      <style>
-        .carousel-item {
-          height: 24rem;
-          min-height: 350px;
-          background: no-repeat center center scroll;
-          -webkit-background-size: cover;
-          -moz-background-size: cover;
-          -o-background-size: cover;
-          background-size: cover;
-        }
-      </style>
-      <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+      <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-inner" >
           <div class="carousel-item active"  style="background-image: url(' https://komisiinformasi.go.id/images/slider/20220315091141-DESA_1.jpeg');">
-          
-          <div class="carousel-caption text-left">
-            <h1 style="font-size: 3rem; font-weight:bold">First slide label</h1>
-            <p>Some representative placeholder content for the first slide.</p>
+            <div class="carousel-caption text-left">
+              <h1 style="font-size: 3rem; font-weight:bold">First slide label</h1>
+              <p>Some representative placeholder content for the first slide.</p>
             </div>
           </div>
           <div class="carousel-item"  style="background-image: url('https://bppk.kemenkeu.go.id/storage/basecontent-banner/331a7d98-a208-4d92-9b80-2d182538f395')">
             <div class="carousel-caption text-left">
               <h1 style="font-size: 3rem; font-weight:bold">First slide label</h1>
               <p>Some representative placeholder content for the first slide.</p>
-              </div>
-            </div>
-          </div>
-          <div class="carousel-item"  style="background-image: url('https://source.unsplash.com/LAaSoL0LrYs/1920x1080')">
-            <div class="carousel-caption text-left">
-              <h1 style="font-size: 3rem; font-weight:bold">First slide label</h1>
-              <p>Some representative placeholder content for the first slide.</p>
-              </div>
             </div>
           </div>
         </div>
-        </div>
+        <a class="carousel-control-prev" href="#carouselExample" role="button" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExample" role="button" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
+        
         <div class="marquee">
           <div class="container-xl">
             <marquee behavior="scroll" scrollamount="5" class="marquee"
@@ -349,75 +333,96 @@
         </div>
 
       <!-- portal -->
-      
-      <div class="container section-portal-mobile d-lg-block mt-3">
+      <style>
+        .card-body{
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          color: white;
+          background: rgba(186, 19, 26, 0.2);
+        }
+
+        .card-title{
+          font-size: 1rem;
+          font-weight: bold;
+        }
+      </style>
+      <div class="container mt-3">
         <div class="row">
-          <div class="col-md-3 text-center">
+          <div class="col-md-3 text-center ">
             <!-- contact info item -->
-            <div class="contact-item bordered rounded">
-              <a href="#" target="_blank">
-                <span class="icon icon-support"></span>
-                <div class="details">
-                  <h3 class="mb-0">E-PPID</h3>
+            <a href="#">
+              <div class="card shadow-sm">
+                <img src="https://images.unsplash.com/photo-1579621970795-87facc2f976d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <p class="card-title">PPID</p>
                 </div>
-              </a>
-            </div>
+              </div>
+            </a>
             <div class="spacer" data-height="20"></div>
           </div>
 
           <div class="col-md-3 text-center">
             <!-- contact info item -->
-            <div class="contact-item bordered rounded">
-              <a href="#" target="_blank">
-                <span class="icon icon-chart"></span>
-                <div class="details">
-                  <h3 class="mb-0">PILKADA 2020</h3>
+            <a href="#">
+
+              <div class="card shadow-sm">
+                <img src="https://images.unsplash.com/photo-1579621970795-87facc2f976d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <p class="card-title">SIMSI</p>
                 </div>
-              </a>
-            </div>
+              </div>
+            </a>
             <div class="spacer" data-height="20"></div>
           </div>
 
           <div class="col-md-3 text-center">
             <!-- contact info item -->
-            <div class="contact-item bordered rounded">
-              <a href="#" target="_blank">
-                <span class="icon icon-organization"></span>
-                <div class="details">
-                  <h3 class="mb-0">SIMSI</h3>
+            <a href="#">
+
+              <div class="card shadow-sm">
+                <img src="https://images.unsplash.com/photo-1579621970795-87facc2f976d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <p class="card-title">JDIH</p>
                 </div>
-              </a>
-            </div>
+              </div>
+            </a>
             <div class="spacer" data-height="20"></div>
           </div>
 
           <div class="col-md-3 text-center">
             <!-- contact info item -->
-            <div class="contact-item bordered rounded">
-              <a href="#" target="_blank">
-                <span class="icon icon-directions"></span>
-                <div class="details">
-                  <h3 class="mb-0">PUTUSAN</h3>
+            <a href="#">
+
+              <div class="card shadow-sm">
+                <img src="https://images.unsplash.com/photo-1579621970795-87facc2f976d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <p class="card-title">E-MONEV
+
+                  </p>
                 </div>
-              </a>
-            </div>
+              </div>
+            </a>
             <div class="spacer" data-height="20"></div>
           </div>
         </div>
       </div>
 
+
       <div class="container d-flex flex-column justify-content-center text-center">
         
         <p style="font-size: 2rem; font-weight: bold" id="judulInformasi"> Statistik Permintaan
         </p>
-        <div class="w-75" style="margin:auto">
-          <div class="w-25">
-            <select class="form-select form-select mb-3" id="jenisData" aria-label=".form-select-lg example" onchange="updateJenisLaporan(this)">
+        <div class="statistik" style="">
+          <div class="d-flex">
+            <select class="form-select form-select w-25 " id="jenisData" aria-label=".form-select-lg example" onchange="updateJenisLaporan(this)">
               <option value="permintaan" selected>Permintaan</option>
               <option value="disetujui">Disetujui</option>
               <option value="ditolak">Ditolak</option>
               <option value="keberatan">keberatan</option>
             </select>
+           <button type="button" class="btn " style="margin-left: 10px; background-color: #ba131a;">Report</button>
           </div>
           <canvas id="myChart"></canvas>
           <canvas id="myChart2" style="display: none;"></canvas>
@@ -672,7 +677,7 @@
       </section>
 
       <!-- Floating Action Button like Google Material -->
-      <div class="menu pmd-floating-action rounded-pill"  role="navigation" style="width: 254px; background-color: #ba131a;"> 
+      <div class="menu pmd-floating-action rounded-pill border border-2"  role="navigation" style="width: 254px; background-color: #ba131a;"> 
         <button class="btn pmd-btn-fab pmd-btn-flat pmd-ripple-effect  w-100" type="button">Komisi Informasi Pusat </button>
       </div>
       <!-- footer -->
@@ -684,41 +689,6 @@
                 <div class="ratio ratio-16x9 mb-2" >
                   <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.53343329443!2d106.82206561471646!3d-6.193121195516543!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f5737b0a462f%3A0x69e5d936a3af9c04!2sGedung%20annex!5e0!3m2!1sid!2sid!4v1631590949664!5m2!1sid!2sid" title="Maps Wisma BSG Gedung Annex" allowfullscreen loading="lazy"></iframe>
                 </div>
-                <ul class="list-unstyled">
-                  <li>
-                    <div class="d-flex">
-                      <span class="material-icons">
-                        place
-                        </span>
-                        <p>Wisma BSG Gedung Annex, Lt 1, Jl Abdul Muis No. 40 Jakarta Pusat 10110</p>
-                    </div>
-                  </li>
-                  <li>
-                    <div class="d-flex">
-                      <span class="material-icons">
-                        support_agent
-                        </span>
-                        <p>Telp : 021-34830741 <br> Fax 021-3451734</p>
-                    </div>
-                  </li>
-                  <li>
-                    <div class="d-flex">
-                      <span class="material-icons">
-                        email
-                        </span>
-                        <p>Email : sekretariat@komisiinformasi.go.id</p>
-                    </div>
-                  </li>
-                  <li >
-                    <div class="d-flex">
-                      <span class="material-icons">
-                        language
-                      </span>
-                      <p>website : www.komisiinformasi.co.id</p>
-                    </div>
-                  </li>
-                  
-                </ul>
               </div>
               <div class="col-md">
                 <ul class="list-unstyled">
@@ -771,34 +741,36 @@
                 <span class="copyright">© 2021 All Rights Reserved by komisiinformasi.go.id</span>
               </div>
             </div>
+            <div class="row mt-2">
+              <div class="col-md">
+                      <span class="material-icons">
+                        place
+                        </span>
+                        <p>Wisma BSG Gedung Annex, Lt 1, Jl Abdul Muis No. 40 Jakarta Pusat 10110</p>
+              </div>
+              <div class="col-md">
+                  <span class="material-icons">
+                    support_agent
+                    </span>
+                    <p>Telp : 021-34830741 <br> Fax 021-3451734</p>
+              </div>
+              <div class="col-md" >
+                <span class="material-icons">
+                  email
+                </span>
+                <p>Email : sekretariat@komisiinformasi.go.id</p>
+              </div>
+              <div class="col-md">
+                <span class="material-icons">
+                  language
+                </span>
+                <p>website : www.komisiinformasi.co.id</p>
+              </div>
+            </div>
           </div>
         </div>
       </footer>
     <!-- end site wrapper -->
-
-    <!-- search popup area -->
-    <div class="search-popup">
-      <!-- close button -->
-      <button type="button" class="btn-close" aria-label="Close"></button>
-      <!-- content -->
-      <div class="search-content">
-        <div class="text-center">
-          <h3 class="mb-4 mt-0">Press ESC to close</h3>
-        </div>
-        <!-- form -->
-        <form class="d-flex search-form">
-          <input
-            class="form-control me-2"
-            type="search"
-            placeholder="Search and press enter ..."
-            aria-label="Search"
-          />
-          <button class="btn btn-default btn-lg" type="submit">
-            <i class="icon-magnifier"></i>
-          </button>
-        </form>
-      </div>
-    </div>
 
     <!-- canvas menu -->
     <div class="canvas-menu d-flex align-items-end flex-column">
@@ -883,6 +855,6 @@
     ></script>
     <script type="text/javascript" src="js/propeller.min.js"></script>
     <script src="js/diagram.js"></script>
-   
+
   </body>
 </html>
