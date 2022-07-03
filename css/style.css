@@ -2922,4 +2922,14 @@ input[type="search"]::-webkit-search-cancel-button:hover {
        width: 100%;
     }
  }
+
+ .title-caption{
+   font-size: 3rem; 
+   font-weight:bold; 
+   text-shadow: 3px 3px #000;
+ }
+
+ .sub-caption{
+  text-shadow: 1px 1px #000;
+ }
 /*# sourceMappingURL=style.css.map */
