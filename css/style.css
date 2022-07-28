@@ -2917,6 +2917,10 @@ input[type="search"]::-webkit-search-cancel-button:hover {
   margin:auto; 
   width: 60%;
 }
+
+.allForm {
+  width: 46rem;
+}
 @media screen and (max-width: 991px) {
     .statistik {
         margin: auto;
@@ -2932,5 +2936,11 @@ input[type="search"]::-webkit-search-cancel-button:hover {
 
  .sub-caption{
   text-shadow: 1px 1px #000;
+ }
+
+ @media screen and (max-width: 574px){
+  .allForm{
+    width: auto;
+  }
  }
 /*# sourceMappingURL=style.css.map */

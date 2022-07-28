@@ -147,13 +147,12 @@
       </nav>
     </header>
 
-    <!-- website form -->
-    <div class="container shadow p-3 mb-5 mt-5 bg-white rounded w-50 d-none d-md-block">
+    <div class="container shadow p-3 mb-5 mt-5 bg-white rounded allForm">
       <div class="row d-flex justify-content-center">
         <p style="font-size: 1.5rem; font-weight:bold;" class="text-center">Daftar</p>
         <form>
           <div class="mb-3">
-            <input placeholder="Nama" class="form-control" id="exampleInputNama1" aria-describedby="NamaHelp">
+            <input placeholder="Nama" class="form-control"  aria-describedby="NamaHelp">
           </div>
 
           <select class="form-select mb-4 rounded-pill" aria-label="Default select example">
@@ -167,16 +166,18 @@
             <option value="1">KTP</option>
           </select>
 
-
           <div class="mb-3">
-            <input placeholder="NIK " class="form-control" id="exampleInputNIK1" aria-describedby="NIKHelp">
+            <input placeholder="NIK " class="form-control"  aria-describedby="NIKHelp">
           </div>
           <div class="mb-4">
             <label for="formFile" class="form-label text-danger">No indentitas wajib diisi!</label>
-            <input class="form-control" type="file" id="formFile">
+            <div>
+              <img src="#" alt="" id="img-preview" >
+            </div>
+            <input class="form-control mt-2" type="file" id="formFile" >
           </div>
           <div class="mb-3">
-            <input placeholder="NPWP " class="form-control" id="exampleInputNPWP1" aria-describedby="NPWPHelp">
+            <input placeholder="NPWP " class="form-control"  aria-describedby="NPWPHelp">
           </div>
           <select class="form-select mb-4 rounded-pill" aria-label="Default select example">
             <option disabled selected>Pekerjaan</option>
@@ -184,21 +185,21 @@
 
           </select>
           <div class="mb-3">
-            <input placeholder="Alamat " class="form-control" id="exampleInputAlamat1" aria-describedby="AlamatHelp">
+            <input placeholder="Alamat " class="form-control" aria-describedby="AlamatHelp">
           </div>
           <div class="mb-3">
-            <input placeholder="Telp " class="form-control" id="exampleInputTelp1" aria-describedby="TelpHelp">
+            <input placeholder="Telp " class="form-control"  aria-describedby="TelpHelp">
           </div>
           <div class="mb-3">
-            <input placeholder="Keterangan " class="form-control" id="exampleInputKeterangan1"
+            <input placeholder="Keterangan " class="form-control" 
               aria-describedby="KeteranganHelp">
           </div>
           <div class="mb-3">
-            <input placeholder="Email " class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            <input placeholder="Email " class="form-control"  aria-describedby="emailHelp">
           </div>
           <div class="mb-3">
 
-            <input type="password" placeholder="Password" class="form-control" id="exampleInputPassword1">
+            <input type="password" placeholder="Password" class="form-control" >
           </div>
 
           <div class="text-end">
@@ -209,70 +210,9 @@
 
         </form>
       </div>
-
     </div>
+
   </div>
-
-  <!-- mobile -->
-  <div class="container shadow p-3 mb-5 mt-5 bg-white rounded d-md-none">
-    <div class="row d-flex justify-content-center">
-      <p style="font-size: 1.5rem; font-weight:bold;" class="text-center">Daftar</p>
-      <form>
-        <div class="mb-3">
-          <input placeholder="Nama" class="form-control" id="exampleInputNama1" aria-describedby="NamaHelp">
-        </div>
-
-        <select class="form-select mb-4 rounded-pill" aria-label="Default select example">
-          <option disabled selected>Jenis Pemohonan</option>
-          <option value="1">One</option>
-          <option value="2">Two</option>
-          <option value="3">Three</option>
-        </select>
-        <select class="form-select mb-4 rounded-pill" aria-label="Default select example">
-          <option disabled selected>Jenis NIK</option>
-          <option value="1">KTP</option>
-        </select>
-
-
-        <div class="mb-3">
-          <input placeholder="NIK " class="form-control" id="exampleInputNIK1" aria-describedby="NIKHelp">
-        </div>
-        <div class="mb-4">
-          <label for="formFile" class="form-label text-danger">No indentitas wajib diisi!</label>
-          <input class="form-control" type="file" id="formFile">
-        </div>
-        <div class="mb-3">
-          <input placeholder="NPWP " class="form-control" id="exampleInputNPWP1" aria-describedby="NPWPHelp">
-        </div>
-        <select class="form-select mb-4 rounded-pill" aria-label="Default select example">
-          <option disabled selected>Pekerjaan</option>
-          <option value="1">KTP</option>
-
-        </select>
-        <div class="mb-3">
-          <input placeholder="Alamat " class="form-control" id="exampleInputAlamat1" aria-describedby="AlamatHelp">
-        </div>
-        <div class="mb-3">
-          <input placeholder="Telp " class="form-control" id="exampleInputTelp1" aria-describedby="TelpHelp">
-        </div>
-        <div class="mb-3">
-          <input placeholder="Keterangan " class="form-control" id="exampleInputKeterangan1"
-            aria-describedby="KeteranganHelp">
-        </div>
-        <div class="mb-3">
-          <input placeholder="Email " class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-        </div>
-        <div class="mb-3">
-
-          <input type="password" placeholder="Password" class="form-control" id="exampleInputPassword1">
-        </div>
-        <div class="text-end">
-          <button type="submit" class="btn " style="background-color:#1474ae ;">Daftar</button>
-          <a href="login.html"><button type="button" class="btn " style="color:#1474ae ;">Batal</button></a>
-        </div>
-      </form>
-    </div>
-
   </div>
   </div>
 
@@ -430,6 +370,28 @@
   <script src="js/slick.min.js"></script>
   <script src="js/jquery.sticky-sidebar.min.js"></script>
   <script src="js/custom.js"></script>
+
+  <script>
+     $("#formFile").change(function() {
+      imgPreview(this);
+    });
+    function imgPreview(input) {
+      var file = input.files[0];
+      var mixedfile = file['type'].split("/");
+      var filetype = mixedfile[0];
+      if(filetype == "image"){
+        var reader = new FileReader();
+        reader.onload = function(e){
+          $("#img-preview").show().attr("src", e.target.result);
+          $("#img-preview").css({'width': '300px', 'height': '200px'});
+        }
+        reader.readAsDataURL(input.files[0]);
+      }
+      else{
+          alert("Invalid file type");
+      }
+    }
+  </script>
 
 </body>
 

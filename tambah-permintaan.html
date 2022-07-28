@@ -228,8 +228,7 @@
         </nav>
       </header>
 
-      <!-- website -->
-      <div class="container shadow p-3 mb-5 mt-5 w-50 bg-white rounded d-none d-md-block">
+      <div class="container shadow p-3 mb-5 mt-5  bg-white rounded allForm">
         <div class="row d-flex justify-content-center mb-4 mt-4">
             <p style="font-size: 1.5rem; font-weight:bold;" class="text-center">Tambah Permintaan</p>
 				<form>
@@ -254,7 +253,6 @@
                       <div class="mb-3">
                         <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Tujuan Pengunaan Informasi"></textarea>
                       </div>
-
                         <div class=" mb-3 form-check">
                             <input type="checkbox" class="form-check-input checkbox-dikuasakan" id="exampleCheck1">
                             <label class="form-check-label" for="exampleCheck1">Dikuasakan</label>
@@ -274,11 +272,13 @@
                         </div>
                         <div class="mb-3 ">
                             <label for="formFile" class="form-label">File Identitas</label>
-                            <input class="form-control" type="file" id="formFile">
+                            <input class="form-control" type="file" id="formFileIdentitas">
+                            <div id="alertIdentitas"></div>
                         </div>
                         <div class="mb-3">
                             <label for="formFile" class="form-label">Dokumen Pendukung</label>
-                            <input class="form-control" type="file" id="formFile">
+                            <input class="form-control" type="file" id="formFileDokumenPendukung">
+                            <div id="alertDokumenPendukung"></div>
                         </div>
                       </div>
                       <div class="text-end">
@@ -289,60 +289,6 @@
                       </div>
 					  
 				  </form>
-			</div>
-        </div>
-      </div>
-      <!-- mobile -->
-      <div class="container shadow p-3 mb-5 mt-5 bg-white rounded  d-md-none">
-        <div class="row d-flex justify-content-center mb-4 mt-4">
-            <p style="font-size: 1.5rem; font-weight:bold;" class="text-center">Tambah Permintaan</p>
-				<form>
-					<select class="form-select mb-4 rounded-pill" aria-label="Default select example" >
-                        <option disabled selected>Cara mendapatkan informasi</option>
-                        <option value="1">KTP</option>
-
-                      </select>
-                      <select class="form-select mb-4 rounded-pill" aria-label="Default select example" >
-                        <option disabled selected>Cara memperoleh informasi</option>
-                        <option value="1">KTP</option>
-
-                      </select>
-                      <select class="form-select mb-4 rounded-pill" aria-label="Default select example" >
-                        <option disabled selected>PPID Tujuan permintaan informasi</option>
-                        <option value="1">KTP</option>
-
-                      </select>
-                      <div class="mb-3">
-                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Isi Permintaan Informasi"></textarea>
-                      </div>
-                      <div class="mb-3">
-                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Tujuan Pengunaan Informasi"></textarea>
-                      </div>
-
-                        <div class=" mb-3 form-check">
-                            <input type="checkbox" class="form-check-input checkbox-dikuasakan" id="exampleCheck1">
-                            <label class="form-check-label" for="exampleCheck1">Dikuasakan</label>
-                        </div>
-                      <div class="dikuasakan" style="display: none;">
-                        
-                        <div class="mb-3 ">
-                            <label for="formFile" class="form-label">File Identitas</label>
-                            <input class="form-control" type="file" id="formFile">
-                        </div>
-                        <div class="mb-3">
-                            <label for="formFile" class="form-label">Dokumen Pendukung</label>
-                            <input class="form-control" type="file" id="formFile">
-                        </div>
-                      </div>
-                      <div class="text-end">
-                          <button type="submit" class="btn rounded-pill" style="background-color:#1474ae;">Simpan</button>
-                          <a href="permintaan.html" class="text-danger">
-                              Batal
-                          </a>
-                      </div>
-					  
-				  </form>
-			</div>
         </div>
       </div>
 
@@ -530,6 +476,14 @@
             }
         });
 
+        $("#formFileIdentitas").change(function() {
+          $("#alertIdentitas").addClass("mt-2 alert alert-info")
+          $("#alertIdentitas").text("File identitas berhasil dimasukkan !!")
+        });
+        $("#formFileDokumenPendukung").change(function() {
+          $("#alertDokumenPendukung").addClass("mt-2 alert alert-info")
+          $("#alertDokumenPendukung").text("Dokumen Pendukung berhasil dimasukkan !!")
+        });
     </script>
   </body>
 </html>
